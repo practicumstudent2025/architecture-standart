@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Диаграмма контейнеров - MVP открытия депозитов</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1168BD;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .diagram {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            overflow-x: auto;
+        }
+        .diagram-container {
+            position: relative;
+            width: 1300px;
+            height: 800px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background: #fafafa;
+        }
+        .person {
+            position: absolute;
+            width: 180px;
+            height: 80px;
+            background: #08427B;
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+            font-size: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .container-system {
+            position: absolute;
+            width: 220px;
+            height: 80px;
+            background: #1168BD;
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+            font-size: 11px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .external-system {
+            position: absolute;
+            width: 180px;
+            height: 80px;
+            background: #999999;
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+            font-size: 11px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .arrow {
+            position: absolute;
+            height: 2px;
+            background: #333;
+            transform-origin: left center;
+        }
+        .arrow::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: -4px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid #333;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+        }
+        .arrow-dashed {
+            position: absolute;
+            height: 2px;
+            background: repeating-linear-gradient(to right, #333 0px, #333 4px, transparent 4px, transparent 8px);
+            transform-origin: left center;
+        }
+        .arrow-dashed::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: -4px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid #333;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+        }
+        .label {
+            position: absolute;
+            background: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 10px;
+            border: 1px solid #ddd;
+            max-width: 120px;
+        }
+        .legend {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .legend h3 {
+            margin-top: 0;
+            color: #1168BD;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        .description {
+            margin-top: 30px;
+            line-height: 1.6;
+        }
+        .layer {
+            position: absolute;
+            background: rgba(17, 104, 189, 0.1);
+            border: 2px dashed #1168BD;
+            border-radius: 8px;
+        }
+        .layer-label {
+            position: absolute;
+            background: #1168BD;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Диаграмма контейнеров - MVP открытия депозитов</h1>
+        
+        <div class="diagram">
+            <div class="diagram-container">
+                <!-- Слои архитектуры -->
+                <div class="layer" style="left: 20px; top: 20px; width: 1260px; height: 760px;">
+                    <div class="layer-label" style="left: 10px; top: -15px;">Система открытия депозитов онлайн</div>
+                </div>
+                
+                <!-- Presentation Layer -->
+                <div class="layer" style="left: 40px; top: 40px; width: 300px; height: 200px;">
+                    <div class="layer-label" style="left: 10px; top: -15px;">Presentation Layer</div>
+                </div>
+                
+                <!-- Integration Layer -->
+                <div class="layer" style="left: 380px; top: 40px; width: 400px; height: 200px;">
+                    <div class="layer-label" style="left: 10px; top: -15px;">Integration Layer</div>
+                </div>
+                
+                <!-- Business Logic Layer -->
+                <div class="layer" style="left: 380px; top: 260px; width: 400px; height: 200px;">
+                    <div class="layer-label" style="left: 10px; top: -15px;">Business Logic Layer</div>
+                </div>
+                
+                <!-- Data Layer -->
+                <div class="layer" style="left: 800px; top: 40px; width: 400px; height: 200px;">
+                    <div class="layer-label" style="left: 10px; top: -15px;">Data Layer</div>
+                </div>
+                
+                <!-- External Systems -->
+                <div class="layer" style="left: 40px; top: 480px; width: 1160px; height: 280px;">
+                    <div class="layer-label" style="left: 10px; top: -15px;">External Systems</div>
+                </div>
+                
+                <!-- Клиент -->
+                <div class="person" style="left: 50px; top: 350px;">
+                    Клиент<br><br>Физическое лицо,<br>желающее открыть депозит
+                </div>
+                
+                <!-- Менеджер кол-центра -->
+                <div class="person" style="left: 50px; top: 550px;">
+                    Менеджер<br>кол-центра<br><br>Обрабатывает заявки<br>с сайта
+                </div>
+                
+                <!-- Сотрудник бэк-офиса -->
+                <div class="person" style="left: 1100px; top: 350px;">
+                    Сотрудник<br>бэк-офиса<br><br>Подтверждает заявки<br>из интернет-банка
+                </div>
+                
+                <!-- Presentation Layer -->
+                <div class="container-system" style="left: 60px; top: 80px;">
+                    Веб-сайт банка<br>[Container: ASP.NET MVC]<br><br>Публичный доступ к информации<br>о депозитах и подача заявок
+                </div>
+                
+                <div class="container-system" style="left: 60px; top: 180px;">
+                    Интернет-банк<br>[Container: ASP.NET MVC]<br><br>Персонализированный доступ<br>для авторизованных клиентов
+                </div>
+                
+                <!-- Integration Layer -->
+                <div class="container-system" style="left: 400px; top: 80px;">
+                    API Gateway<br>[Container: .NET Core]<br><br>Централизованная точка входа,<br>аутентификация, авторизация,<br>маршрутизация, кэширование
+                </div>
+                
+                <div class="container-system" style="left: 400px; top: 180px;">
+                    Система очередей<br>[Container: RabbitMQ]<br><br>Асинхронная обработка<br>заявок и уведомлений
+                </div>
+                
+                <!-- Business Logic Layer -->
+                <div class="container-system" style="left: 400px; top: 300px;">
+                    Сервис депозитов<br>[Container: .NET Core]<br><br>Основная бизнес-логика<br>обработки заявок на депозиты
+                </div>
+                
+                <div class="container-system" style="left: 400px; top: 400px;">
+                    Сервис ставок<br>[Container: .NET Core]<br><br>Управление ставками<br>и условиями депозитов
+                </div>
+                
+                <!-- Data Layer -->
+                <div class="container-system" style="left: 820px; top: 80px;">
+                    База данных<br>[Container: MS SQL/Oracle]<br><br>Хранение заявок,<br>конфигурации и логов
+                </div>
+                
+                <div class="container-system" style="left: 820px; top: 180px;">
+                    Система кэширования<br>[Container: Redis]<br><br>Быстрый доступ к<br>справочным данным
+                </div>
+                
+                <!-- АБС - детализация -->
+                <div class="external-system" style="left: 820px; top: 300px;">
+                    База данных АБС<br>[Container: Oracle]<br><br>Основная банковская<br>система (ограниченный доступ)
+                </div>
+                
+                <div class="external-system" style="left: 820px; top: 400px;">
+                    API АБС<br>[Container: Legacy System]<br><br>Интерфейс для работы<br>с банковскими операциями
+                </div>
+                
+                <!-- Система мониторинга -->
+                <div class="container-system" style="left: 820px; top: 500px;">
+                    Система мониторинга<br>[Container: Prometheus + Grafana]<br><br>Контроль производительности<br>и доступности системы
+                </div>
+                
+                <!-- External Systems -->
+                <div class="external-system" style="left: 60px; top: 520px;">
+                    Кол-центр<br>[Software System]<br><br>Система обработки<br>звонков и заявок
+                </div>
+                
+                <div class="external-system" style="left: 280px; top: 520px;">
+                    СМС-шлюз<br>[Software System]<br><br>Отправка SMS<br>уведомлений
+                </div>
+                
+                <div class="external-system" style="left: 500px; top: 520px;">
+                    Email-сервис<br>[Software System]<br><br>Отправка email<br>уведомлений
+                </div>
+                
+                <!-- Стрелки -->
+                <!-- Клиент -> Веб-сайт -->
+                <div class="arrow" style="left: 230px; top: 390px; width: 70px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 240px; top: 370px;">Подает заявку<br>на депозит</div>
+                
+                <!-- Клиент -> Интернет-банк -->
+                <div class="arrow" style="left: 230px; top: 490px; width: 70px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 240px; top: 470px;">Подает заявку<br>на депозит</div>
+                
+                <!-- Веб-сайт -> API Gateway -->
+                <div class="arrow" style="left: 280px; top: 120px; width: 120px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 330px; top: 100px;">HTTP/HTTPS</div>
+                
+                <!-- Интернет-банк -> API Gateway -->
+                <div class="arrow" style="left: 280px; top: 220px; width: 120px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 330px; top: 200px;">HTTP/HTTPS</div>
+                
+                <!-- API Gateway -> Сервис депозитов -->
+                <div class="arrow" style="left: 620px; top: 120px; width: 100px; transform: rotate(90deg);"></div>
+                <div class="label" style="left: 650px; top: 140px;">HTTP/HTTPS</div>
+                
+                <!-- API Gateway -> Сервис ставок -->
+                <div class="arrow" style="left: 620px; top: 220px; width: 100px; transform: rotate(90deg);"></div>
+                <div class="label" style="left: 650px; top: 240px;">HTTP/HTTPS</div>
+                
+                <!-- Сервис депозитов -> Система очередей -->
+                <div class="arrow" style="left: 620px; top: 340px; width: 100px; transform: rotate(90deg);"></div>
+                <div class="label" style="left: 650px; top: 360px;">AMQP</div>
+                
+                <!-- Сервис ставок -> Система кэширования -->
+                <div class="arrow" style="left: 620px; top: 440px; width: 200px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 720px; top: 420px;">Redis Protocol</div>
+                
+                <!-- Сервис депозитов -> База данных -->
+                <div class="arrow" style="left: 620px; top: 340px; width: 200px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 720px; top: 320px;">SQL</div>
+                
+                <!-- Сервис депозитов -> API АБС -->
+                <div class="arrow" style="left: 620px; top: 340px; width: 200px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 720px; top: 380px;">HTTP/HTTPS<br>(ограниченный доступ)</div>
+                
+                <!-- API АБС -> База данных АБС -->
+                <div class="arrow" style="left: 1020px; top: 340px; width: 100px; transform: rotate(90deg);"></div>
+                <div class="label" style="left: 1050px; top: 360px;">SQL</div>
+                
+                <!-- Система очередей -> СМС-шлюз -->
+                <div class="arrow" style="left: 620px; top: 220px; width: 200px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 720px; top: 200px;">HTTP/HTTPS</div>
+                
+                <!-- Система очередей -> Email-сервис -->
+                <div class="arrow" style="left: 620px; top: 220px; width: 200px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 720px; top: 240px;">HTTP/HTTPS</div>
+                
+                <!-- Система очередей -> Кол-центр -->
+                <div class="arrow" style="left: 620px; top: 220px; width: 200px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 720px; top: 260px;">HTTP/HTTPS</div>
+                
+                <!-- Менеджер кол-центра -> Кол-центр -->
+                <div class="arrow" style="left: 230px; top: 590px; width: 50px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 240px; top: 570px;">Изучает и<br>обрабатывает заявки</div>
+                
+                <!-- Сотрудник бэк-офиса -> API АБС -->
+                <div class="arrow" style="left: 1020px; top: 390px; width: 80px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 1070px; top: 370px;">Подтверждает<br>условия депозита</div>
+                
+                <!-- Система мониторинга -> Все компоненты -->
+                <div class="arrow-dashed" style="left: 1020px; top: 540px; width: 200px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 1070px; top: 520px;">Мониторинг</div>
+            </div>
+        </div>
+        
+        <div class="legend">
+            <h3>Условные обозначения</h3>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #08427B;"></div>
+                <span>Персона (Person) - пользователи системы</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #1168BD;"></div>
+                <span>Контейнеры системы (Container) - основные компоненты архитектуры</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #999999;"></div>
+                <span>Внешние системы (Software System) - существующие системы банка</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #333;"></div>
+                <span>Сплошная стрелка - синхронное взаимодействие</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: repeating-linear-gradient(to right, #333 0px, #333 4px, transparent 4px, transparent 8px);"></div>
+                <span>Пунктирная стрелка - мониторинг</span>
+            </div>
+        </div>
+        
+        <div class="description">
+            <h3>Описание диаграммы</h3>
+            <p>Диаграмма контейнеров показывает детальную архитектуру системы открытия депозитов онлайн с разделением на слои:</p>
+            
+            <h4>Presentation Layer (Слой представления):</h4>
+            <ul>
+                <li><strong>Веб-сайт банка</strong> - публичный доступ к информации о депозитах и подача заявок</li>
+                <li><strong>Интернет-банк</strong> - персонализированный доступ для авторизованных клиентов</li>
+            </ul>
+            
+            <h4>Integration Layer (Слой интеграции):</h4>
+            <ul>
+                <li><strong>API Gateway</strong> - централизованная точка входа с аутентификацией, авторизацией и кэшированием</li>
+                <li><strong>Система очередей</strong> - асинхронная обработка заявок и уведомлений</li>
+            </ul>
+            
+            <h4>Business Logic Layer (Слой бизнес-логики):</h4>
+            <ul>
+                <li><strong>Сервис депозитов</strong> - основная бизнес-логика обработки заявок</li>
+                <li><strong>Сервис ставок</strong> - управление ставками и условиями депозитов</li>
+            </ul>
+            
+            <h4>Data Layer (Слой данных):</h4>
+            <ul>
+                <li><strong>База данных</strong> - хранение заявок, конфигурации и логов</li>
+                <li><strong>Система кэширования</strong> - быстрый доступ к справочным данным</li>
+                <li><strong>База данных АБС</strong> - основная банковская система (ограниченный доступ)</li>
+                <li><strong>API АБС</strong> - интерфейс для работы с банковскими операциями</li>
+            </ul>
+            
+            <h4>External Systems (Внешние системы):</h4>
+            <ul>
+                <li><strong>Кол-центр</strong> - система обработки звонков и заявок</li>
+                <li><strong>СМС-шлюз</strong> - отправка SMS уведомлений</li>
+                <li><strong>Email-сервис</strong> - отправка email уведомлений</li>
+                <li><strong>Система мониторинга</strong> - контроль производительности и доступности</li>
+            </ul>
+            
+            <h4>Ключевые особенности архитектуры:</h4>
+            <ul>
+                <li><strong>API Gateway</strong> защищает от перегрузки АБС и обеспечивает централизованную точку входа</li>
+                <li><strong>Асинхронная обработка</strong> через систему очередей снижает нагрузку на критические системы</li>
+                <li><strong>Кэширование</strong> ускоряет загрузку справочных данных</li>
+                <li><strong>Ограниченный доступ к АБС</strong> предотвращает перегрузку основной банковской системы</li>
+                <li><strong>Мониторинг</strong> обеспечивает контроль производительности всех компонентов</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html> 

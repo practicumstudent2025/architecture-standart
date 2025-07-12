@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Карта IT-ландшафта банка "Стандарт"</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .landscape-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        .landscape-table th {
+            background-color: #e1d5e7;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid #ddd;
+        }
+        .landscape-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+            vertical-align: middle;
+            min-height: 60px;
+        }
+        .sales-marketing {
+            background-color: #dae8fc;
+            border-color: #6c8ebf;
+        }
+        .operational-processes {
+            background-color: #d5e8d4;
+            border-color: #82b366;
+        }
+        .department-row {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            text-align: left;
+        }
+        .system-cell {
+            border-radius: 4px;
+            font-size: 11px;
+            line-height: 1.3;
+        }
+        .legend {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .legend-item {
+            display: inline-block;
+            margin-right: 20px;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        .legend-sales {
+            background-color: #dae8fc;
+            border: 1px solid #6c8ebf;
+        }
+        .legend-operational {
+            background-color: #d5e8d4;
+            border: 1px solid #82b366;
+        }
+        .legend-department {
+            background-color: #e1d5e7;
+            border: 1px solid #9673a6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Карта IT-ландшафта банка "Стандарт"</h1>
+        
+        <table class="landscape-table">
+            <thead>
+                <tr>
+                    <th>Организационные подразделения</th>
+                    <th class="sales-marketing">Продажи в сети отделений</th>
+                    <th class="sales-marketing">Продажи через кол-центр</th>
+                    <th class="sales-marketing">Диджитал-оповещения клиентов</th>
+                    <th class="operational-processes">Обслуживание депозитных процессов</th>
+                    <th class="operational-processes">Обслуживание кредитных процессов</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="department-row">Управление обслуживанием в сети отделений (500 чел, 50 отделений)</td>
+                    <td class="system-cell sales-marketing">Интернет-банк (ASP.NET MVC 4.5, MS SQL)</td>
+                    <td class="system-cell sales-marketing">АБС (Delphi, Oracle)</td>
+                    <td class="system-cell sales-marketing">СМС-шлюз (внешний)</td>
+                    <td class="system-cell operational-processes">АБС (Delphi, Oracle)</td>
+                    <td class="system-cell operational-processes">АБС (Delphi, Oracle)</td>
+                </tr>
+                <tr>
+                    <td class="department-row">Управление IT (40 чел: 10 внутр + 10 подрядчик + 20 АБС)</td>
+                    <td class="system-cell sales-marketing">Интернет-банк (ASP.NET MVC 4.5, MS SQL)</td>
+                    <td class="system-cell sales-marketing">Система кол-центра (React.js, Java Spring Boot, PostgreSQL)</td>
+                    <td class="system-cell sales-marketing">СМС-шлюз (внешний)</td>
+                    <td class="system-cell operational-processes">АБС (Delphi, Oracle)</td>
+                    <td class="system-cell operational-processes">АБС (Delphi, Oracle)</td>
+                </tr>
+                <tr>
+                    <td class="department-row">Управление обслуживанием депозитных продуктов (50 чел)</td>
+                    <td class="system-cell"></td>
+                    <td class="system-cell"></td>
+                    <td class="system-cell"></td>
+                    <td class="system-cell operational-processes">АБС (Delphi, Oracle) + Excel</td>
+                    <td class="system-cell"></td>
+                </tr>
+                <tr>
+                    <td class="department-row">Управление обслуживанием кредитных продуктов (50 чел)</td>
+                    <td class="system-cell"></td>
+                    <td class="system-cell"></td>
+                    <td class="system-cell"></td>
+                    <td class="system-cell"></td>
+                    <td class="system-cell operational-processes">АБС (Delphi, Oracle)</td>
+                </tr>
+                <tr>
+                    <td class="department-row">Кол-центр банка (200 операторов)</td>
+                    <td class="system-cell"></td>
+                    <td class="system-cell sales-marketing">Система кол-центра (React.js, Java Spring Boot, PostgreSQL)</td>
+                    <td class="system-cell"></td>
+                    <td class="system-cell operational-processes">АБС (Delphi, Oracle)</td>
+                    <td class="system-cell"></td>
+                </tr>
+                <tr>
+                    <td class="department-row">Партнёрский кол-центр (100 чел)</td>
+                    <td class="system-cell"></td>
+                    <td class="system-cell sales-marketing">Внешняя система партнёра</td>
+                    <td class="system-cell"></td>
+                    <td class="system-cell"></td>
+                    <td class="system-cell"></td>
+                </tr>
+                <tr>
+                    <td class="department-row">Команда цифровой трансформации (10 чел)</td>
+                    <td class="system-cell sales-marketing">Сайт (PHP, React.js)</td>
+                    <td class="system-cell"></td>
+                    <td class="system-cell"></td>
+                    <td class="system-cell"></td>
+                    <td class="system-cell"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="legend">
+            <h3>Легенда:</h3>
+            <div class="legend-item legend-sales">Продажи и маркетинг</div>
+            <div class="legend-item legend-operational">Поддержка операционных процессов</div>
+            <div class="legend-item legend-department">Организационные подразделения</div>
+        </div>
+        
+        <div class="description">
+            <h3>Описание карты IT-ландшафта:</h3>
+            <p>Карта показывает, какие IT-системы используются каждым организационным подразделением для реализации различных бизнес-возможностей.</p>
+            <p><strong>Цветовая схема:</strong></p>
+            <ul>
+                <li><strong>Голубой</strong> - системы, поддерживающие продажи и маркетинг</li>
+                <li><strong>Зеленый</strong> - системы, поддерживающие операционные процессы</li>
+                <li><strong>Серый</strong> - организационные подразделения</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html> 

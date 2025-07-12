@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Схема интеграции приложений банка "Стандарт"</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .diagram-container {
+            position: relative;
+            min-height: 800px;
+            margin-bottom: 30px;
+        }
+        .system {
+            position: absolute;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.3;
+            min-width: 120px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .client {
+            background-color: #dae8fc;
+            border: 2px solid #6c8ebf;
+            top: 50px;
+            left: 50px;
+        }
+        .website {
+            background-color: #dae8fc;
+            border: 2px solid #6c8ebf;
+            top: 50px;
+            left: 250px;
+        }
+        .internet-bank {
+            background-color: #dae8fc;
+            border: 2px solid #6c8ebf;
+            top: 50px;
+            left: 450px;
+        }
+        .abs {
+            background-color: #d5e8d4;
+            border: 2px solid #82b366;
+            top: 50px;
+            left: 700px;
+        }
+        .callcenter {
+            background-color: #dae8fc;
+            border: 2px solid #6c8ebf;
+            top: 200px;
+            left: 250px;
+        }
+        .partner-callcenter {
+            background-color: #fff2cc;
+            border: 2px solid #d6b656;
+            top: 200px;
+            left: 500px;
+        }
+        .sms-gateway {
+            background-color: #fff2cc;
+            border: 2px solid #d6b656;
+            top: 200px;
+            left: 750px;
+        }
+        .excel {
+            background-color: #f8cecc;
+            border: 2px solid #b85450;
+            top: 200px;
+            left: 1000px;
+        }
+        .credit-dept {
+            background-color: #d5e8d4;
+            border: 2px solid #82b366;
+            top: 350px;
+            left: 1100px;
+        }
+        .email {
+            background-color: #fff2cc;
+            border: 2px solid #d6b656;
+            top: 350px;
+            left: 900px;
+        }
+        .documents {
+            background-color: #f8cecc;
+            border: 2px solid #b85450;
+            top: 500px;
+            left: 700px;
+        }
+        .actor {
+            position: absolute;
+            width: 60px;
+            height: 80px;
+            background-color: #e1d5e7;
+            border: 2px solid #9673a6;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 10px;
+            line-height: 1.2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .front-office {
+            top: 600px;
+            left: 100px;
+        }
+        .back-office-deposits {
+            top: 600px;
+            left: 300px;
+        }
+        .back-office-credits {
+            top: 600px;
+            left: 500px;
+        }
+        .callcenter-operators {
+            top: 600px;
+            left: 700px;
+        }
+        .it-team {
+            top: 600px;
+            left: 900px;
+        }
+        .connection {
+            position: absolute;
+            height: 2px;
+            background-color: #333;
+            transform-origin: left center;
+        }
+        .connection-label {
+            position: absolute;
+            background: white;
+            padding: 2px 6px;
+            font-size: 10px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+        .process-flow {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .problems {
+            background: #f8cecc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .goals {
+            background: #d5e8d4;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .process-step {
+            margin: 8px 0;
+            padding: 8px;
+            background: white;
+            border-radius: 4px;
+            border-left: 4px solid #6c8ebf;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Схема интеграции приложений банка "Стандарт"</h1>
+        
+        <div class="diagram-container">
+            <!-- Системы верхнего уровня -->
+            <div class="system client">Клиент</div>
+            <div class="system website">Сайт<br>(PHP, React.js)</div>
+            <div class="system internet-bank">Интернет-банк<br>(ASP.NET MVC 4.5, MS SQL)</div>
+            <div class="system abs">АБС<br>(Delphi, Oracle, PL-SQL)</div>
+            
+            <!-- Системы среднего уровня -->
+            <div class="system callcenter">Система кол-центра<br>(React.js, Java Spring Boot, PostgreSQL)</div>
+            <div class="system partner-callcenter">Партнёрский кол-центр<br>(Внешняя система)</div>
+            <div class="system sms-gateway">СМС-шлюз<br>(Внешний телеком-оператор)</div>
+            <div class="system excel">Excel файлы<br>(Расчеты ставок)</div>
+            <div class="system credit-dept">Отдел кредитования<br>(АБС - кредитный модуль)</div>
+            <div class="system email">Почтовая система<br>(Внутренние коммуникации)</div>
+            <div class="system documents">Документооборот<br>(Загрузка документов в АБС)</div>
+            
+            <!-- Участники процессов -->
+            <div class="actor front-office">Сотрудники фронт-офиса<br>(500 чел, 50 отделений)</div>
+            <div class="actor back-office-deposits">Сотрудники бэк-офиса<br>(депозиты, 50 чел)</div>
+            <div class="actor back-office-credits">Сотрудники бэк-офиса<br>(кредиты, 50 чел)</div>
+            <div class="actor callcenter-operators">Операторы кол-центра<br>(200 чел)</div>
+            <div class="actor it-team">IT команда<br>(40 чел)</div>
+            
+            <!-- Связи -->
+            <div class="connection" style="width: 150px; top: 80px; left: 110px; transform: rotate(0deg);"></div>
+            <div class="connection-label" style="top: 70px; left: 150px;">Подача заявки на депозит</div>
+            
+            <div class="connection" style="width: 150px; top: 80px; left: 320px; transform: rotate(0deg);"></div>
+            <div class="connection-label" style="top: 70px; left: 360px;">Открытие депозита</div>
+            
+            <div class="connection" style="width: 150px; top: 80px; left: 600px; transform: rotate(0deg);"></div>
+            <div class="connection-label" style="top: 70px; left: 640px;">Прямая интеграция с БД</div>
+            
+            <div class="connection" style="width: 100px; top: 230px; left: 450px; transform: rotate(45deg);"></div>
+            <div class="connection-label" style="top: 220px; left: 480px;">Передача обращений</div>
+            
+            <div class="connection" style="width: 100px; top: 80px; left: 850px; transform: rotate(0deg);"></div>
+            <div class="connection-label" style="top: 70px; left: 890px;">СМС-оповещения</div>
+            
+            <div class="connection" style="width: 200px; top: 630px; left: 130px; transform: rotate(-45deg);"></div>
+            <div class="connection-label" style="top: 620px; left: 200px;">Создание депозитов</div>
+            
+            <div class="connection" style="width: 200px; top: 630px; left: 330px; transform: rotate(-45deg);"></div>
+            <div class="connection-label" style="top: 620px; left: 400px;">Расчет ставок</div>
+            
+            <div class="connection" style="width: 200px; top: 630px; left: 330px; transform: rotate(45deg);"></div>
+            <div class="connection-label" style="top: 670px; left: 400px;">Ручные расчеты в Excel</div>
+            
+            <div class="connection" style="width: 200px; top: 630px; left: 530px; transform: rotate(-45deg);"></div>
+            <div class="connection-label" style="top: 620px; left: 600px;">Анализ кредитных рисков</div>
+            
+            <div class="connection" style="width: 200px; top: 630px; left: 730px; transform: rotate(-45deg);"></div>
+            <div class="connection-label" style="top: 620px; left: 800px;">Работа с обращениями</div>
+            
+            <div class="connection" style="width: 200px; top: 630px; left: 930px; transform: rotate(-45deg);"></div>
+            <div class="connection-label" style="top: 620px; left: 1000px;">Поддержка и развитие</div>
+            
+            <!-- Новые связи -->
+            <div class="connection" style="width: 150px; top: 230px; left: 1050px; transform: rotate(0deg);"></div>
+            <div class="connection-label" style="top: 220px; left: 1090px;">Ежедневные данные по рискам</div>
+            
+            <div class="connection" style="width: 150px; top: 380px; left: 950px; transform: rotate(0deg);"></div>
+            <div class="connection-label" style="top: 370px; left: 990px;">Почтовые коммуникации</div>
+            
+            <div class="connection" style="width: 150px; top: 530px; left: 750px; transform: rotate(0deg);"></div>
+            <div class="connection-label" style="top: 520px; left: 790px;">Загрузка документов</div>
+            
+            <div class="connection" style="width: 100px; top: 380px; left: 1150px; transform: rotate(-45deg);"></div>
+            <div class="connection-label" style="top: 370px; left: 1180px;">Специальные ставки</div>
+        </div>
+        
+        <div class="process-flow">
+            <div class="section-title">Детальный процесс открытия депозита:</div>
+            <div class="process-step">1. Клиент подает заявку в отделении или звонит в кол-центр</div>
+            <div class="process-step">2. Сотрудники отдела кредитования рассчитывают ставки в Excel на основе данных ЦБ</div>
+            <div class="process-step">3. При звонке в кол-центр - создается обращение, передается в АБС</div>
+            <div class="process-step">4. Бэк-офис обрабатывает заявки и определяет ставки заранее</div>
+            <div class="process-step">5. АБС отправляет СМС-клиенту с предложением ставки</div>
+            <div class="process-step">6. При специальных ставках - дополнительная переписка между отделами</div>
+            <div class="process-step">7. Фронт-офис создает депозит в АБС и выдает документы</div>
+            <div class="process-step">8. Подписанные документы загружаются в АБС</div>
+        </div>
+        
+        <div class="problems">
+            <div class="section-title">Проблемные зоны для цифровой трансформации:</div>
+            <ul>
+                <li><strong>Ручные расчеты ставок в Excel</strong> - неэффективный процесс</li>
+                <li><strong>Почтовые коммуникации</strong> - медленный обмен информацией</li>
+                <li><strong>Разделение доступа к данным</strong> - сложности с безопасностью</li>
+                <li><strong>Длительное время обработки</strong> (20 минут - 1 час)</li>
+                <li><strong>Отсутствие автоматизации</strong> - много ручных операций</li>
+            </ul>
+        </div>
+        
+        <div class="goals">
+            <div class="section-title">Цели цифровой трансформации:</div>
+            <ul>
+                <li><strong>Автоматизация открытия депозитов онлайн</strong> - полный цикл без участия сотрудников</li>
+                <li><strong>Исключение участия бэк-офиса в процессе</strong> - сокращение операционных издержек</li>
+                <li><strong>Автоматический расчет ставок</strong> - интеграция с внешними источниками данных</li>
+                <li><strong>Цифровое подписание документов</strong> - исключение бумажного документооборота</li>
+                <li><strong>Сокращение операционных издержек</strong> - повышение эффективности</li>
+            </ul>
+        </div>
+        
+        <div class="description">
+            <h3>Описание схемы интеграции:</h3>
+            <p>Схема показывает полный процесс взаимодействия между различными системами банка и участниками процессов. Видны все этапы от подачи заявки до создания депозита, включая проблемные зоны с ручными процессами и почтовыми коммуникациями.</p>
+        </div>
+    </div>
+</body>
+</html> 

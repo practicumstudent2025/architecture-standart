@@ -1,0 +1,140 @@
+<mxfile host="app.diagrams.net" modified="2024-01-15T10:00:00.000Z" agent="5.0" etag="xxx" version="22.1.16" type="device">
+  <diagram name="Context-Diagram" id="context-diagram">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Система передачи ставок -->
+        <mxCell id="system" value="Система передачи ставок&#xa;&#xa;Координирует передачу актуальных&#xa;ставок по депозитам в кол-центры&#xa;для поддержки консультаций клиентов" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=#1168BD;fontColor=#FFFFFF;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="300" width="300" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Клиент -->
+        <mxCell id="client" value="Клиент&#xa;&#xa;Пожилые люди,&#xa;желающие получить&#xa;консультацию по депозитам" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=#08427B;fontColor=#FFFFFF;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="200" width="150" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Сотрудник кол-центра -->
+        <mxCell id="callcenter_employee" value="Сотрудник&#xa;кол-центра&#xa;&#xa;Консультирует клиентов&#xa;по ставкам и помогает&#xa;с подачей заявок" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=#08427B;fontColor=#FFFFFF;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="400" width="150" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Администратор системы -->
+        <mxCell id="admin" value="Администратор&#xa;системы&#xa;&#xa;Управляет процессом&#xa;передачи ставок и&#xa;мониторит систему" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=#08427B;fontColor=#FFFFFF;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="950" y="200" width="150" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Кол-центр банка -->
+        <mxCell id="bank_callcenter" value="Кол-центр банка&#xa;&#xa;Внутренняя система&#xa;обработки звонков&#xa;с локальной базой ставок" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#999999;fontColor=#FFFFFF;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="500" width="200" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Партнерский кол-центр -->
+        <mxCell id="partner_callcenter" value="Партнерский&#xa;кол-центр&#xa;&#xa;Внешняя система&#xa;получает ставки&#xa;через SFTP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#999999;fontColor=#FFFFFF;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="500" width="200" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Сервис ставок -->
+        <mxCell id="rate_service" value="Сервис ставок&#xa;&#xa;Основная система&#xa;управления ставками&#xa;по депозитам" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#999999;fontColor=#FFFFFF;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="150" width="200" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- SFTP-сервер -->
+        <mxCell id="sftp_server" value="SFTP-сервер&#xa;&#xa;Безопасная передача&#xa;файлов со ставками&#xa;партнерскому кол-центру" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#999999;fontColor=#FFFFFF;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="150" width="200" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Стрелки -->
+        <!-- Клиент -> Кол-центр банка -->
+        <mxCell id="arrow1" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="client" target="bank_callcenter">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="250" as="sourcePoint" />
+            <mxPoint x="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label1" value="Звонит для&#xa;консультации" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="180" y="280" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Сотрудник кол-центра -> Кол-центр банка -->
+        <mxCell id="arrow2" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="callcenter_employee" target="bank_callcenter">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="450" as="sourcePoint" />
+            <mxPoint x="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label2" value="Использует&#xa;систему" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="180" y="470" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Система передачи ставок -> Кол-центр банка -->
+        <mxCell id="arrow3" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="system" target="bank_callcenter">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="420" as="sourcePoint" />
+            <mxPoint x="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label3" value="Передает&#xa;актуальные ставки" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="350" y="440" width="100" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Система передачи ставок -> Партнерский кол-центр -->
+        <mxCell id="arrow4" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="system" target="partner_callcenter">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="420" as="sourcePoint" />
+            <mxPoint x="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label4" value="Передает файлы&#xa;со ставками" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="720" y="440" width="100" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Сервис ставок -> Система передачи ставок -->
+        <mxCell id="arrow5" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="rate_service" target="system">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="250" as="sourcePoint" />
+            <mxPoint x="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label5" value="Предоставляет&#xa;данные о ставках" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="350" y="270" width="100" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Система передачи ставок -> SFTP-сервер -->
+        <mxCell id="arrow6" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="system" target="sftp_server">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="300" as="sourcePoint" />
+            <mxPoint x="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label6" value="Отправляет&#xa;файлы" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="720" y="280" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Администратор -> Система передачи ставок -->
+        <mxCell id="arrow7" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="admin" target="system">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="950" y="250" as="sourcePoint" />
+            <mxPoint x="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label7" value="Управляет&#xa;системой" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="850" y="270" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- SFTP-сервер -> Партнерский кол-центр -->
+        <mxCell id="arrow8" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="sftp_server" target="partner_callcenter">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="750" y="250" as="sourcePoint" />
+            <mxPoint x="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label8" value="SFTP&#xa;передача" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="760" y="350" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 

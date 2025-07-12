@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Диаграмма контекста - MVP открытия депозитов</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1168BD;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .diagram {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        .diagram-container {
+            position: relative;
+            width: 1000px;
+            height: 600px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background: #fafafa;
+        }
+        .system {
+            position: absolute;
+            width: 250px;
+            height: 100px;
+            background: #1168BD;
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .person {
+            position: absolute;
+            width: 180px;
+            height: 80px;
+            background: #08427B;
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .external-system {
+            position: absolute;
+            width: 180px;
+            height: 80px;
+            background: #999999;
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .arrow {
+            position: absolute;
+            height: 2px;
+            background: #333;
+            transform-origin: left center;
+        }
+        .arrow::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: -4px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid #333;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+        }
+        .label {
+            position: absolute;
+            background: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            border: 1px solid #ddd;
+        }
+        .legend {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .legend h3 {
+            margin-top: 0;
+            color: #1168BD;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        .description {
+            margin-top: 30px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Диаграмма контекста - MVP открытия депозитов</h1>
+        
+        <div class="diagram">
+            <div class="diagram-container">
+                <!-- Система открытия депозитов онлайн -->
+                <div class="system" style="left: 350px; top: 250px;">
+                    Система открытия<br>депозитов онлайн<br><br>Позволяет клиентам подавать<br>заявки через сайт и интернет-банк
+                </div>
+                
+                <!-- Клиент -->
+                <div class="person" style="left: 50px; top: 250px;">
+                    Клиент<br><br>Физическое лицо,<br>желающее открыть депозит
+                </div>
+                
+                <!-- Менеджер кол-центра -->
+                <div class="person" style="left: 50px; top: 450px;">
+                    Менеджер<br>кол-центра<br><br>Обрабатывает заявки<br>с сайта
+                </div>
+                
+                <!-- Сотрудник бэк-офиса -->
+                <div class="person" style="left: 750px; top: 250px;">
+                    Сотрудник<br>бэк-офиса<br><br>Подтверждает заявки<br>из интернет-банка
+                </div>
+                
+                <!-- АБС -->
+                <div class="external-system" style="left: 750px; top: 450px;">
+                    АБС<br><br>Автоматизированная<br>банковская система
+                </div>
+                
+                <!-- Кол-центр -->
+                <div class="external-system" style="left: 50px; top: 650px;">
+                    Кол-центр<br><br>Система обработки<br>звонков и заявок
+                </div>
+                
+                <!-- СМС-шлюз -->
+                <div class="external-system" style="left: 350px; top: 650px;">
+                    СМС-шлюз<br><br>Отправка SMS<br>уведомлений
+                </div>
+                
+                <!-- Email-сервис -->
+                <div class="external-system" style="left: 550px; top: 650px;">
+                    Email-сервис<br><br>Отправка email<br>уведомлений
+                </div>
+                
+                <!-- Стрелки -->
+                <div class="arrow" style="left: 230px; top: 290px; width: 120px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 280px; top: 270px;">Подает заявку на депозит<br>через сайт или интернет-банк</div>
+                
+                <div class="arrow" style="left: 600px; top: 290px; width: 150px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 650px; top: 270px;">Отправляет данные<br>для подтверждения депозита</div>
+                
+                <div class="arrow" style="left: 350px; top: 350px; width: 100px; transform: rotate(90deg);"></div>
+                <div class="label" style="left: 380px; top: 380px;">Передает заявки<br>с сайта для обработки</div>
+                
+                <div class="arrow" style="left: 450px; top: 350px; width: 100px; transform: rotate(90deg);"></div>
+                <div class="label" style="left: 480px; top: 380px;">Отправляет SMS<br>уведомления</div>
+                
+                <div class="arrow" style="left: 550px; top: 350px; width: 100px; transform: rotate(90deg);"></div>
+                <div class="label" style="left: 580px; top: 380px;">Отправляет email<br>уведомления</div>
+                
+                <div class="arrow" style="left: 230px; top: 490px; width: 120px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 280px; top: 470px;">Изучает и обрабатывает<br>заявки</div>
+                
+                <div class="arrow" style="left: 950px; top: 290px; width: 120px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 1000px; top: 270px;">Подтверждает условия<br>депозита</div>
+            </div>
+        </div>
+        
+        <div class="legend">
+            <h3>Условные обозначения</h3>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #08427B;"></div>
+                <span>Персона (Person) - пользователи системы</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #1168BD;"></div>
+                <span>Система открытия депозитов онлайн (Software System) - основная система</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #999999;"></div>
+                <span>Внешние системы (Software System) - существующие системы банка</span>
+            </div>
+        </div>
+        
+        <div class="description">
+            <h3>Описание диаграммы</h3>
+            <p>Диаграмма контекста показывает высокоуровневое взаимодействие между системой открытия депозитов онлайн и внешними акторами и системами:</p>
+            
+            <h4>Основные акторы:</h4>
+            <ul>
+                <li><strong>Клиент</strong> - физическое лицо, которое подает заявку на депозит через сайт или интернет-банк</li>
+                <li><strong>Менеджер кол-центра</strong> - обрабатывает заявки, поступившие с сайта</li>
+                <li><strong>Сотрудник бэк-офиса</strong> - подтверждает заявки, поступившие из интернет-банка</li>
+            </ul>
+            
+            <h4>Внешние системы:</h4>
+            <ul>
+                <li><strong>АБС</strong> - автоматизированная банковская система для подтверждения депозитов</li>
+                <li><strong>Кол-центр</strong> - система обработки звонков и заявок</li>
+                <li><strong>СМС-шлюз</strong> - отправка SMS уведомлений клиентам</li>
+                <li><strong>Email-сервис</strong> - отправка email уведомлений</li>
+            </ul>
+            
+            <h4>Основные потоки данных:</h4>
+            <ul>
+                <li>Клиент подает заявку через сайт или интернет-банк</li>
+                <li>Система передает данные в АБС для подтверждения</li>
+                <li>Заявки с сайта передаются в кол-центр для обработки</li>
+                <li>Система отправляет SMS и email уведомления</li>
+                <li>Менеджер кол-центра обрабатывает заявки</li>
+                <li>Сотрудник бэк-офиса подтверждает условия депозита в АБС</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html> 

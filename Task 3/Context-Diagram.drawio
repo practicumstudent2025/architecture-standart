@@ -1,0 +1,87 @@
+<mxfile host="app.diagrams.net" modified="2024-01-01T12:00:00.000Z" agent="5.0" etag="xxx" version="22.1.16" type="device">
+  <diagram name="Context-Diagram" id="context-diagram">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Система открытия депозитов онлайн -->
+        <mxCell id="system" value="Система открытия&#xa;депозитов онлайн&#xa;[Software System]&#xa;&#xa;Позволяет клиентам подавать&#xa;заявки на депозиты через&#xa;сайт и интернет-банк" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=#0E5DAD;fontColor=#FFFFFF;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="400" y="300" width="300" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Клиент -->
+        <mxCell id="client" value="Клиент&#xa;[Person]&#xa;&#xa;Физическое лицо,&#xa;желающее открыть депозит" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=#073B6F;fontColor=#FFFFFF;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="50" y="300" width="200" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Менеджер кол-центра -->
+        <mxCell id="call-center-manager" value="Менеджер&#xa;кол-центра&#xa;[Person]&#xa;&#xa;Обрабатывает заявки&#xa;с сайта" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=#073B6F;fontColor=#FFFFFF;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="50" y="500" width="200" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Сотрудник бэк-офиса -->
+        <mxCell id="back-office-employee" value="Сотрудник&#xa;бэк-офиса&#xa;[Person]&#xa;&#xa;Подтверждает заявки&#xa;из интернет-банка" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=#073B6F;fontColor=#FFFFFF;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="900" y="300" width="200" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- АБС -->
+        <mxCell id="abs" value="АБС&#xa;[Software System]&#xa;&#xa;Автоматизированная&#xa;банковская система" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#8A8A8A;fontColor=#FFFFFF;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="900" y="500" width="200" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Кол-центр -->
+        <mxCell id="call-center" value="Кол-центр&#xa;[Software System]&#xa;&#xa;Система обработки&#xa;звонков и заявок" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#8A8A8A;fontColor=#FFFFFF;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="50" y="700" width="200" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- СМС-шлюз -->
+        <mxCell id="sms-gateway" value="СМС-шлюз&#xa;[Software System]&#xa;&#xa;Отправка SMS&#xa;уведомлений" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#8A8A8A;fontColor=#FFFFFF;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="400" y="700" width="200" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Email-сервис -->
+        <mxCell id="email-service" value="Email-сервис&#xa;[Software System]&#xa;&#xa;Отправка email&#xa;уведомлений" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#8A8A8A;fontColor=#FFFFFF;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="700" y="700" width="200" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Связи -->
+        <!-- Клиент -> Система -->
+        <mxCell id="client-system" value="Подает заявку на депозит&#xa;через сайт или интернет-банк" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="1" source="client" target="system">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Система -> АБС -->
+        <mxCell id="system-abs" value="Отправляет данные&#xa;для подтверждения&#xa;депозита" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="1" source="system" target="abs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Система -> Кол-центр -->
+        <mxCell id="system-call-center" value="Передает заявки&#xa;с сайта для обработки" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="1" source="system" target="call-center">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Система -> СМС-шлюз -->
+        <mxCell id="system-sms" value="Отправляет SMS&#xa;уведомления" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="1" source="system" target="sms-gateway">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Система -> Email-сервис -->
+        <mxCell id="system-email" value="Отправляет email&#xa;уведомления" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="1" source="system" target="email-service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Менеджер кол-центра -> Кол-центр -->
+        <mxCell id="manager-call-center" value="Изучает и обрабатывает&#xa;заявки" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="1" source="call-center-manager" target="call-center">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Сотрудник бэк-офиса -> АБС -->
+        <mxCell id="employee-abs" value="Подтверждает условия&#xa;депозита" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="1" source="back-office-employee" target="abs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 

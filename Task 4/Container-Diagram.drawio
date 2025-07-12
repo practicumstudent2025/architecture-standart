@@ -1,0 +1,258 @@
+<mxfile host="app.diagrams.net" modified="2024-01-15T10:00:00.000Z" agent="5.0" etag="xxx" version="22.1.16" type="device">
+  <diagram name="Container-Diagram" id="container-diagram">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Слои архитектуры -->
+        <mxCell id="layer1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#01579B;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="1360" height="860" as="geometry" />
+        </mxCell>
+        
+        <!-- Rate Management Layer -->
+        <mxCell id="layer2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#4A148C;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="400" height="200" as="geometry" />
+        </mxCell>
+        
+        <!-- Integration Layer -->
+        <mxCell id="layer3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E8;strokeColor=#1B5E20;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="40" width="400" height="200" as="geometry" />
+        </mxCell>
+        
+        <!-- Recipients Layer -->
+        <mxCell id="layer4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E65100;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="260" width="820" height="200" as="geometry" />
+        </mxCell>
+        
+        <!-- External Systems -->
+        <mxCell id="layer5" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE4EC;strokeColor=#880E4F;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="480" width="820" height="200" as="geometry" />
+        </mxCell>
+        
+        <!-- Layer Labels -->
+        <mxCell id="label1" value="Rate Management Layer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#4A148C;" vertex="1" parent="1">
+          <mxGeometry x="50" y="50" width="180" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="label2" value="Integration Layer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#1B5E20;" vertex="1" parent="1">
+          <mxGeometry x="470" y="50" width="140" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="label3" value="Recipients Layer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="50" y="270" width="140" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="label4" value="External Systems" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#880E4F;" vertex="1" parent="1">
+          <mxGeometry x="50" y="490" width="140" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Rate Management Layer Components -->
+        <mxCell id="rate_service" value="Сервис ставок&#xa;[Container: .NET Core]&#xa;&#xa;Основная система управления&#xa;ставками по депозитам" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=#1168BD;fontColor=#FFFFFF;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="100" width="180" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="rate_transfer_system" value="Система передачи ставок&#xa;[Container: .NET Core]&#xa;&#xa;Координация передачи данных&#xa;планирование и мониторинг" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=#1168BD;fontColor=#FFFFFF;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="100" width="180" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Integration Layer Components -->
+        <mxCell id="sftp_server" value="SFTP-сервер&#xa;[Container: OpenSSH]&#xa;&#xa;Безопасная передача файлов&#xa;аутентификация и шифрование" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=#1168BD;fontColor=#FFFFFF;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="100" width="180" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="api_callcenter" value="API для кол-центра&#xa;[Container: REST API]&#xa;&#xa;Интеграция с внутренним&#xa;кол-центром банка" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=#1168BD;fontColor=#FFFFFF;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="100" width="180" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Recipients Layer Components -->
+        <mxCell id="bank_callcenter" value="Кол-центр банка&#xa;[Container: Legacy System]&#xa;&#xa;Внутренняя система обработки&#xa;звонков с локальной БД ставок" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=#1168BD;fontColor=#FFFFFF;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="320" width="200" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="partner_callcenter" value="Партнерский кол-центр&#xa;[Container: External System]&#xa;&#xa;Внешняя система получения&#xa;файлов через SFTP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#999999;fontColor=#FFFFFF;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="320" width="200" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="file_processor" value="Система обработки файлов&#xa;[Container: Legacy System]&#xa;&#xa;Обработка полученных файлов&#xa;и обновление локальной БД" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=#1168BD;fontColor=#FFFFFF;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="320" width="200" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="notification_system" value="Система уведомлений&#xa;[Container: .NET Core]&#xa;&#xa;Оповещения об обновлениях&#xa;и статусе передачи" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=#1168BD;fontColor=#FFFFFF;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="320" width="200" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- External Systems -->
+        <mxCell id="monitoring" value="Система мониторинга&#xa;[Container: Prometheus + Grafana]&#xa;&#xa;Контроль процесса передачи&#xa;и производительности" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=#1168BD;fontColor=#FFFFFF;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="540" width="200" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="database" value="База данных ставок&#xa;[Container: MS SQL]&#xa;&#xa;Хранение конфигурации&#xa;и логов передачи" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=#1168BD;fontColor=#FFFFFF;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="540" width="200" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="security" value="Система безопасности&#xa;[Container: Legacy System]&#xa;&#xa;Шифрование файлов&#xa;и управление доступом" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=#1168BD;fontColor=#FFFFFF;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="540" width="200" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="scheduler" value="Планировщик задач&#xa;[Container: .NET Core]&#xa;&#xa;Управление расписанием&#xa;передачи ставок" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=#1168BD;fontColor=#FFFFFF;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="540" width="200" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Персона -->
+        <mxCell id="admin" value="Администратор&#xa;системы&#xa;&#xa;Управляет процессом&#xa;передачи ставок" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=#08427B;fontColor=#FFFFFF;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="100" width="150" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="callcenter_employee" value="Сотрудник&#xa;кол-центра&#xa;&#xa;Консультирует клиентов&#xa;по ставкам" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=#08427B;fontColor=#FFFFFF;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="320" width="150" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Стрелки -->
+        <!-- Сервис ставок -> Система передачи ставок -->
+        <mxCell id="arrow1" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="rate_service" target="rate_transfer_system">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="140" as="sourcePoint" />
+            <mxPoint x="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label1" value="Предоставляет данные" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="250" y="130" width="100" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Система передачи ставок -> SFTP-сервер -->
+        <mxCell id="arrow2" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="rate_transfer_system" target="sftp_server">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="140" as="sourcePoint" />
+            <mxPoint x="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label2" value="Отправляет файлы" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="450" y="130" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Система передачи ставок -> API для кол-центра -->
+        <mxCell id="arrow3" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="rate_transfer_system" target="api_callcenter">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="140" as="sourcePoint" />
+            <mxPoint x="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label3" value="Передает ставки" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="550" y="130" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- API для кол-центра -> Кол-центр банка -->
+        <mxCell id="arrow4" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="api_callcenter" target="bank_callcenter">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="770" y="180" as="sourcePoint" />
+            <mxPoint x="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label4" value="HTTP/HTTPS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="450" y="200" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- SFTP-сервер -> Партнерский кол-центр -->
+        <mxCell id="arrow5" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="sftp_server" target="partner_callcenter">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="570" y="180" as="sourcePoint" />
+            <mxPoint x="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label5" value="SFTP" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="450" y="220" width="40" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Партнерский кол-центр -> Система обработки файлов -->
+        <mxCell id="arrow6" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="partner_callcenter" target="file_processor">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="360" as="sourcePoint" />
+            <mxPoint x="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label6" value="Обрабатывает файлы" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="490" y="340" width="100" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Система передачи ставок -> Система уведомлений -->
+        <mxCell id="arrow7" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="rate_transfer_system" target="notification_system">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="180" as="sourcePoint" />
+            <mxPoint x="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label7" value="Отправляет уведомления" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="200" width="120" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Система передачи ставок -> База данных -->
+        <mxCell id="arrow8" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="rate_transfer_system" target="database">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="180" as="sourcePoint" />
+            <mxPoint x="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label8" value="Сохраняет логи" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="350" y="200" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Система передачи ставок -> Система безопасности -->
+        <mxCell id="arrow9" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="rate_transfer_system" target="security">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="180" as="sourcePoint" />
+            <mxPoint x="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label9" value="Шифрует данные" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="500" y="200" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Система передачи ставок -> Планировщик -->
+        <mxCell id="arrow10" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="rate_transfer_system" target="scheduler">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="180" as="sourcePoint" />
+            <mxPoint x="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label10" value="Управляет расписанием" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="650" y="200" width="120" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Администратор -> Система передачи ставок -->
+        <mxCell id="arrow11" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="admin" target="rate_transfer_system">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="900" y="140" as="sourcePoint" />
+            <mxPoint x="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label11" value="Управляет" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="650" y="130" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Сотрудник кол-центра -> Кол-центр банка -->
+        <mxCell id="arrow12" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="callcenter_employee" target="bank_callcenter">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="900" y="360" as="sourcePoint" />
+            <mxPoint x="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label12" value="Использует" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="650" y="360" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Система мониторинга -> Все компоненты -->
+        <mxCell id="arrow13" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;dashed=1;" edge="1" parent="1" source="monitoring" target="rate_transfer_system">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="580" as="sourcePoint" />
+            <mxPoint x="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label13" value="Мониторинг" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="250" y="560" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 

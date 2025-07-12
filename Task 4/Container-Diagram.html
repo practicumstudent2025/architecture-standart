@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Диаграмма контейнеров - Система передачи ставок кол-центрам</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1168BD;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .diagram {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            overflow-x: auto;
+        }
+        .diagram-container {
+            position: relative;
+            width: 1300px;
+            height: 800px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background: #fafafa;
+        }
+        .person {
+            position: absolute;
+            width: 180px;
+            height: 80px;
+            background: #08427B;
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+            font-size: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .container-system {
+            position: absolute;
+            width: 220px;
+            height: 80px;
+            background: #1168BD;
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+            font-size: 11px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .external-system {
+            position: absolute;
+            width: 180px;
+            height: 80px;
+            background: #999999;
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+            font-size: 11px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .arrow {
+            position: absolute;
+            height: 2px;
+            background: #333;
+            transform-origin: left center;
+        }
+        .arrow::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: -4px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid #333;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+        }
+        .arrow-dashed {
+            position: absolute;
+            height: 2px;
+            background: repeating-linear-gradient(to right, #333 0px, #333 4px, transparent 4px, transparent 8px);
+            transform-origin: left center;
+        }
+        .arrow-dashed::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: -4px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid #333;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+        }
+        .label {
+            position: absolute;
+            background: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 10px;
+            border: 1px solid #ddd;
+            max-width: 120px;
+        }
+        .legend {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .legend h3 {
+            margin-top: 0;
+            color: #1168BD;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        .description {
+            margin-top: 30px;
+            line-height: 1.6;
+        }
+        .layer {
+            position: absolute;
+            background: rgba(17, 104, 189, 0.1);
+            border: 2px dashed #1168BD;
+            border-radius: 8px;
+        }
+        .layer-label {
+            position: absolute;
+            background: #1168BD;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Диаграмма контейнеров - Система передачи ставок кол-центрам</h1>
+        
+        <div class="diagram">
+            <div class="diagram-container">
+                <!-- Слои архитектуры -->
+                <div class="layer" style="left: 20px; top: 20px; width: 1260px; height: 760px;">
+                    <div class="layer-label" style="left: 10px; top: -15px;">Система передачи ставок кол-центрам</div>
+                </div>
+                
+                <!-- Rate Management Layer -->
+                <div class="layer" style="left: 40px; top: 40px; width: 400px; height: 200px;">
+                    <div class="layer-label" style="left: 10px; top: -15px;">Rate Management Layer</div>
+                </div>
+                
+                <!-- Integration Layer -->
+                <div class="layer" style="left: 460px; top: 40px; width: 400px; height: 200px;">
+                    <div class="layer-label" style="left: 10px; top: -15px;">Integration Layer</div>
+                </div>
+                
+                <!-- Recipients Layer -->
+                <div class="layer" style="left: 40px; top: 260px; width: 820px; height: 200px;">
+                    <div class="layer-label" style="left: 10px; top: -15px;">Recipients Layer</div>
+                </div>
+                
+                <!-- External Systems -->
+                <div class="layer" style="left: 40px; top: 480px; width: 820px; height: 200px;">
+                    <div class="layer-label" style="left: 10px; top: -15px;">External Systems</div>
+                </div>
+                
+                <!-- Rate Management Layer Components -->
+                <div class="container-system" style="left: 60px; top: 80px;">
+                    Сервис ставок<br>[Container: .NET Core]<br><br>Основная система управления<br>ставками по депозитам
+                </div>
+                
+                <div class="container-system" style="left: 260px; top: 80px;">
+                    Система передачи ставок<br>[Container: .NET Core]<br><br>Координация передачи данных<br>планирование и мониторинг
+                </div>
+                
+                <!-- Integration Layer Components -->
+                <div class="container-system" style="left: 480px; top: 80px;">
+                    SFTP-сервер<br>[Container: OpenSSH]<br><br>Безопасная передача файлов<br>аутентификация и шифрование
+                </div>
+                
+                <div class="container-system" style="left: 680px; top: 80px;">
+                    API для кол-центра<br>[Container: REST API]<br><br>Интеграция с внутренним<br>кол-центром банка
+                </div>
+                
+                <!-- Recipients Layer Components -->
+                <div class="container-system" style="left: 60px; top: 300px;">
+                    Кол-центр банка<br>[Container: Legacy System]<br><br>Внутренняя система обработки<br>звонков с локальной БД ставок
+                </div>
+                
+                <div class="external-system" style="left: 280px; top: 300px;">
+                    Партнерский кол-центр<br>[Container: External System]<br><br>Внешняя система получения<br>файлов через SFTP
+                </div>
+                
+                <div class="container-system" style="left: 500px; top: 300px;">
+                    Система обработки файлов<br>[Container: Legacy System]<br><br>Обработка полученных файлов<br>и обновление локальной БД
+                </div>
+                
+                <div class="container-system" style="left: 720px; top: 300px;">
+                    Система уведомлений<br>[Container: .NET Core]<br><br>Оповещения об обновлениях<br>и статусе передачи
+                </div>
+                
+                <!-- External Systems -->
+                <div class="container-system" style="left: 60px; top: 520px;">
+                    Система мониторинга<br>[Container: Prometheus + Grafana]<br><br>Контроль процесса передачи<br>и производительности
+                </div>
+                
+                <div class="container-system" style="left: 280px; top: 520px;">
+                    База данных ставок<br>[Container: MS SQL]<br><br>Хранение конфигурации<br>и логов передачи
+                </div>
+                
+                <div class="container-system" style="left: 500px; top: 520px;">
+                    Система безопасности<br>[Container: Legacy System]<br><br>Шифрование файлов<br>и управление доступом
+                </div>
+                
+                <div class="container-system" style="left: 720px; top: 520px;">
+                    Планировщик задач<br>[Container: .NET Core]<br><br>Управление расписанием<br>передачи ставок
+                </div>
+                
+                <!-- Персона -->
+                <div class="person" style="left: 900px; top: 100px;">
+                    Администратор<br>системы<br><br>Управляет процессом<br>передачи ставок
+                </div>
+                
+                <div class="person" style="left: 900px; top: 320px;">
+                    Сотрудник<br>кол-центра<br><br>Консультирует клиентов<br>по ставкам
+                </div>
+                
+                <!-- Стрелки -->
+                <!-- Сервис ставок -> Система передачи ставок -->
+                <div class="arrow" style="left: 240px; top: 120px; width: 20px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 250px; top: 100px;">Предоставляет данные</div>
+                
+                <!-- Система передачи ставок -> SFTP-сервер -->
+                <div class="arrow" style="left: 480px; top: 120px; width: 20px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 490px; top: 100px;">Отправляет файлы</div>
+                
+                <!-- Система передачи ставок -> API для кол-центра -->
+                <div class="arrow" style="left: 480px; top: 120px; width: 200px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 550px; top: 100px;">Передает ставки</div>
+                
+                <!-- API для кол-центра -> Кол-центр банка -->
+                <div class="arrow" style="left: 780px; top: 120px; width: 200px; transform: rotate(90deg);"></div>
+                <div class="label" style="left: 850px; top: 150px;">HTTP/HTTPS</div>
+                
+                <!-- SFTP-сервер -> Партнерский кол-центр -->
+                <div class="arrow" style="left: 600px; top: 120px; width: 200px; transform: rotate(90deg);"></div>
+                <div class="label" style="left: 650px; top: 150px;">SFTP</div>
+                
+                <!-- Партнерский кол-центр -> Система обработки файлов -->
+                <div class="arrow" style="left: 480px; top: 340px; width: 20px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 490px; top: 320px;">Обрабатывает файлы</div>
+                
+                <!-- Система передачи ставок -> Система уведомлений -->
+                <div class="arrow" style="left: 480px; top: 120px; width: 240px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 600px; top: 100px;">Отправляет уведомления</div>
+                
+                <!-- Система передачи ставок -> База данных -->
+                <div class="arrow" style="left: 350px; top: 120px; width: 200px; transform: rotate(90deg);"></div>
+                <div class="label" style="left: 420px; top: 150px;">Сохраняет логи</div>
+                
+                <!-- Система передачи ставок -> Система безопасности -->
+                <div class="arrow" style="left: 480px; top: 120px; width: 200px; transform: rotate(90deg);"></div>
+                <div class="label" style="left: 550px; top: 150px;">Шифрует данные</div>
+                
+                <!-- Система передачи ставок -> Планировщик -->
+                <div class="arrow" style="left: 480px; top: 120px; width: 240px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 650px; top: 100px;">Управляет расписанием</div>
+                
+                <!-- Администратор -> Система передачи ставок -->
+                <div class="arrow" style="left: 1080px; top: 140px; width: 200px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 1150px; top: 120px;">Управляет</div>
+                
+                <!-- Сотрудник кол-центра -> Кол-центр банка -->
+                <div class="arrow" style="left: 1080px; top: 360px; width: 200px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 1150px; top: 340px;">Использует</div>
+                
+                <!-- Система мониторинга -> Все компоненты -->
+                <div class="arrow-dashed" style="left: 160px; top: 580px; width: 200px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 250px; top: 560px;">Мониторинг</div>
+            </div>
+        </div>
+        
+        <div class="legend">
+            <h3>Условные обозначения</h3>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #08427B;"></div>
+                <span>Персона (Person) - пользователи системы</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #1168BD;"></div>
+                <span>Контейнеры системы (Container) - основные компоненты архитектуры</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #999999;"></div>
+                <span>Внешние системы (Software System) - партнерские системы</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #333;"></div>
+                <span>Сплошная стрелка - синхронное взаимодействие</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: repeating-linear-gradient(to right, #333 0px, #333 4px, transparent 4px, transparent 8px);"></div>
+                <span>Пунктирная стрелка - мониторинг</span>
+            </div>
+        </div>
+        
+        <div class="description">
+            <h3>Описание диаграммы</h3>
+            <p>Диаграмма контейнеров показывает детальную архитектуру системы передачи ставок кол-центрам с разделением на слои:</p>
+            
+            <h4>Rate Management Layer (Слой управления ставками):</h4>
+            <ul>
+                <li><strong>Сервис ставок</strong> - основная система управления ставками по депозитам</li>
+                <li><strong>Система передачи ставок</strong> - координация передачи данных, планирование и мониторинг</li>
+            </ul>
+            
+            <h4>Integration Layer (Слой интеграции):</h4>
+            <ul>
+                <li><strong>SFTP-сервер</strong> - безопасная передача файлов с аутентификацией и шифрованием</li>
+                <li><strong>API для кол-центра</strong> - интеграция с внутренним кол-центром банка</li>
+            </ul>
+            
+            <h4>Recipients Layer (Слой получателей):</h4>
+            <ul>
+                <li><strong>Кол-центр банка</strong> - внутренняя система обработки звонков с локальной БД ставок</li>
+                <li><strong>Партнерский кол-центр</strong> - внешняя система получения файлов через SFTP</li>
+                <li><strong>Система обработки файлов</strong> - обработка полученных файлов и обновление локальной БД</li>
+                <li><strong>Система уведомлений</strong> - оповещения об обновлениях и статусе передачи</li>
+            </ul>
+            
+            <h4>External Systems (Внешние системы):</h4>
+            <ul>
+                <li><strong>Система мониторинга</strong> - контроль процесса передачи и производительности</li>
+                <li><strong>База данных ставок</strong> - хранение конфигурации и логов передачи</li>
+                <li><strong>Система безопасности</strong> - шифрование файлов и управление доступом</li>
+                <li><strong>Планировщик задач</strong> - управление расписанием передачи ставок</li>
+            </ul>
+            
+            <h4>Ключевые особенности архитектуры:</h4>
+            <ul>
+                <li><strong>Безопасность</strong> - шифрование файлов и безопасная передача через SFTP</li>
+                <li><strong>Надежность</strong> - резервирование каналов и автоматическое восстановление</li>
+                <li><strong>Мониторинг</strong> - полный контроль процесса передачи данных</li>
+                <li><strong>Гибкость</strong> - поддержка различных форматов файлов и протоколов</li>
+                <li><strong>Масштабируемость</strong> - возможность добавления новых получателей</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html> 

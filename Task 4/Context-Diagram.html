@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Диаграмма контекста - Система передачи ставок кол-центрам</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1168BD;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .diagram {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        .diagram-container {
+            position: relative;
+            width: 1000px;
+            height: 600px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background: #fafafa;
+        }
+        .system {
+            position: absolute;
+            width: 250px;
+            height: 100px;
+            background: #1168BD;
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .person {
+            position: absolute;
+            width: 180px;
+            height: 80px;
+            background: #08427B;
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .external-system {
+            position: absolute;
+            width: 180px;
+            height: 80px;
+            background: #999999;
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .arrow {
+            position: absolute;
+            height: 2px;
+            background: #333;
+            transform-origin: left center;
+        }
+        .arrow::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: -4px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid #333;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+        }
+        .label {
+            position: absolute;
+            background: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            border: 1px solid #ddd;
+        }
+        .legend {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .legend h3 {
+            margin-top: 0;
+            color: #1168BD;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        .description {
+            margin-top: 30px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Диаграмма контекста - Система передачи ставок кол-центрам</h1>
+        
+        <div class="diagram">
+            <div class="diagram-container">
+                <!-- Система передачи ставок -->
+                <div class="system" style="left: 350px; top: 250px;">
+                    Система передачи ставок<br><br>Координирует передачу актуальных<br>ставок по депозитам в кол-центры
+                </div>
+                
+                <!-- Клиент -->
+                <div class="person" style="left: 50px; top: 200px;">
+                    Клиент<br><br>Пожилые люди, желающие<br>получить консультацию
+                </div>
+                
+                <!-- Сотрудник кол-центра -->
+                <div class="person" style="left: 50px; top: 400px;">
+                    Сотрудник<br>кол-центра<br><br>Консультирует клиентов<br>по ставкам
+                </div>
+                
+                <!-- Администратор системы -->
+                <div class="person" style="left: 750px; top: 200px;">
+                    Администратор<br>системы<br><br>Управляет процессом<br>передачи ставок
+                </div>
+                
+                <!-- Кол-центр банка -->
+                <div class="external-system" style="left: 200px; top: 500px;">
+                    Кол-центр банка<br><br>Внутренняя система<br>с локальной базой ставок
+                </div>
+                
+                <!-- Партнерский кол-центр -->
+                <div class="external-system" style="left: 600px; top: 500px;">
+                    Партнерский<br>кол-центр<br><br>Внешняя система<br>получает ставки через SFTP
+                </div>
+                
+                <!-- Сервис ставок -->
+                <div class="external-system" style="left: 200px; top: 150px;">
+                    Сервис ставок<br><br>Основная система<br>управления ставками
+                </div>
+                
+                <!-- SFTP-сервер -->
+                <div class="external-system" style="left: 600px; top: 150px;">
+                    SFTP-сервер<br><br>Безопасная передача<br>файлов со ставками
+                </div>
+                
+                <!-- Стрелки -->
+                <div class="arrow" style="left: 230px; top: 240px; width: 120px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 280px; top: 220px;">Звонит для консультации</div>
+                
+                <div class="arrow" style="left: 230px; top: 440px; width: 120px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 280px; top: 420px;">Использует систему</div>
+                
+                <div class="arrow" style="left: 350px; top: 350px; width: 100px; transform: rotate(90deg);"></div>
+                <div class="label" style="left: 380px; top: 380px;">Передает актуальные ставки</div>
+                
+                <div class="arrow" style="left: 650px; top: 350px; width: 100px; transform: rotate(90deg);"></div>
+                <div class="label" style="left: 680px; top: 380px;">Передает файлы со ставками</div>
+                
+                <div class="arrow" style="left: 350px; top: 250px; width: 100px; transform: rotate(90deg);"></div>
+                <div class="label" style="left: 380px; top: 280px;">Предоставляет данные о ставках</div>
+                
+                <div class="arrow" style="left: 600px; top: 250px; width: 100px; transform: rotate(90deg);"></div>
+                <div class="label" style="left: 630px; top: 280px;">Отправляет файлы</div>
+                
+                <div class="arrow" style="left: 700px; top: 240px; width: 150px; transform: rotate(0deg);"></div>
+                <div class="label" style="left: 750px; top: 220px;">Управляет системой</div>
+                
+                <div class="arrow" style="left: 700px; top: 250px; width: 100px; transform: rotate(90deg);"></div>
+                <div class="label" style="left: 730px; top: 280px;">SFTP передача</div>
+            </div>
+        </div>
+        
+        <div class="legend">
+            <h3>Условные обозначения</h3>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #08427B;"></div>
+                <span>Персона (Person) - пользователи системы</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #1168BD;"></div>
+                <span>Система (Software System) - основная система передачи ставок</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #999999;"></div>
+                <span>Внешние системы (Software System) - кол-центры и сервисы</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #333;"></div>
+                <span>Стрелка - взаимодействие между системами</span>
+            </div>
+        </div>
+        
+        <div class="description">
+            <h3>Описание диаграммы</h3>
+            <p>Диаграмма контекста показывает взаимодействие системы передачи ставок с кол-центрами и внешними системами для поддержки консультаций пожилых клиентов.</p>
+            
+            <h4>Ключевые компоненты:</h4>
+            <ul>
+                <li><strong>Система передачи ставок</strong> - центральный компонент, координирующий передачу данных</li>
+                <li><strong>Кол-центр банка</strong> - внутренняя система с локальной базой ставок</li>
+                <li><strong>Партнерский кол-центр</strong> - внешняя система, получающая данные через SFTP</li>
+                <li><strong>Сервис ставок</strong> - источник данных о ставках по депозитам</li>
+                <li><strong>SFTP-сервер</strong> - обеспечивает безопасную передачу файлов</li>
+            </ul>
+            
+            <h4>Основные взаимодействия:</h4>
+            <ul>
+                <li><strong>Клиенты</strong> звонят в кол-центры для консультации по депозитам</li>
+                <li><strong>Сотрудники кол-центров</strong> используют системы с актуальными ставками</li>
+                <li><strong>Система передачи ставок</strong> получает данные от сервиса ставок и распределяет их</li>
+                <li><strong>Администратор</strong> управляет процессом передачи и мониторит систему</li>
+                <li><strong>SFTP-сервер</strong> обеспечивает безопасную передачу файлов партнерскому кол-центру</li>
+            </ul>
+            
+            <h4>Цель системы:</h4>
+            <p>Обеспечить кол-центры актуальными данными о ставках для качественной консультации пожилых клиентов, которые предпочитают телефонное общение.</p>
+        </div>
+    </div>
+</body>
+</html> 

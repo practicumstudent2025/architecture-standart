@@ -1,0 +1,252 @@
+<mxfile host="app.diagrams.net" modified="2024-01-15T10:00:00.000Z" agent="5.0" etag="xxx" version="22.1.16" type="device">
+  <diagram name="RoadMap" id="roadmap">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Заголовок -->
+        <mxCell id="title" value="RoadMap проекта: Система передачи ставок кол-центрам&#xa;Горизонт планирования: 6 месяцев (MVP) + 6 месяцев (целевое решение)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#1168BD;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="1500" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Временная шкала -->
+        <mxCell id="timeline" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1976D2;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="50" y="100" width="1500" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Месяцы -->
+        <mxCell id="month1" value="Месяц 1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#1976D2;" vertex="1" parent="1">
+          <mxGeometry x="100" y="120" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="month2" value="Месяц 2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#1976D2;" vertex="1" parent="1">
+          <mxGeometry x="250" y="120" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="month3" value="Месяц 3" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#1976D2;" vertex="1" parent="1">
+          <mxGeometry x="400" y="120" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="month4" value="Месяц 4" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#1976D2;" vertex="1" parent="1">
+          <mxGeometry x="550" y="120" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="month5" value="Месяц 5" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#1976D2;" vertex="1" parent="1">
+          <mxGeometry x="700" y="120" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="month6" value="Месяц 6" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#1976D2;" vertex="1" parent="1">
+          <mxGeometry x="850" y="120" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="month7" value="Месяц 7" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#1976D2;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="120" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="month8" value="Месяц 8" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#1976D2;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="120" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="month9" value="Месяц 9" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#1976D2;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="120" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="month10" value="Месяц 10" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#1976D2;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="120" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- MVP Phase -->
+        <mxCell id="mvp_phase" value="MVP Phase (6 месяцев)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#388E3C;strokeWidth=2;fontSize=16;fontStyle=1;fontColor=#2E7D32;" vertex="1" parent="1">
+          <mxGeometry x="50" y="200" width="900" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Target Phase -->
+        <mxCell id="target_phase" value="Target Phase (6 месяцев)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#D32F2F;strokeWidth=2;fontSize=16;fontStyle=1;fontColor=#C62828;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="200" width="550" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Задачи MVP Phase -->
+        
+        <!-- Месяц 1-2: Подготовка инфраструктуры -->
+        <mxCell id="task1" value="Подготовка инфраструктуры&#xa;• Развертывание системы передачи ставок&#xa;• Настройка SFTP-сервера&#xa;• Подготовка API для кол-центра&#xa;• Настройка мониторинга" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0277BD;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="280" width="200" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Месяц 3-4: Интеграция с кол-центрами -->
+        <mxCell id="task2" value="Интеграция с кол-центрами&#xa;• Интеграция с внутренним кол-центром&#xa;• Настройка передачи данных партнерскому кол-центру&#xa;• Тестирование процесса передачи&#xa;• Обучение персонала" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0277BD;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="280" y="280" width="200" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Месяц 5-6: Запуск и оптимизация -->
+        <mxCell id="task3" value="Запуск и оптимизация&#xa;• Пилотный запуск&#xa;• Мониторинг производительности&#xa;• Оптимизация процессов&#xa;• Полномасштабный запуск" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0277BD;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="500" y="280" width="200" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Месяц 6: Тестирование и валидация -->
+        <mxCell id="task4" value="Тестирование и валидация&#xa;• Комплексное тестирование&#xa;• Тестирование безопасности&#xa;• Пользовательское тестирование&#xa;• Валидация с заинтересованными сторонами" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0277BD;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="720" y="280" width="200" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Задачи Target Phase -->
+        
+        <!-- Месяц 7-8: Расширение функциональности -->
+        <mxCell id="task5" value="Расширение функциональности&#xa;• Добавление новых форматов файлов&#xa;• Улучшение системы безопасности&#xa;• Расширение мониторинга&#xa;• Оптимизация производительности" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#D32F2F;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="280" width="200" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Месяц 9-10: Масштабирование -->
+        <mxCell id="task6" value="Масштабирование&#xa;• Подключение дополнительных кол-центров&#xa;• Улучшение архитектуры&#xa;• Автоматизация процессов&#xa;• Расширение аналитики" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#D32F2F;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="280" width="200" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Месяц 11-12: Стабилизация и развитие -->
+        <mxCell id="task7" value="Стабилизация и развитие&#xa;• Стабилизация системы&#xa;• Разработка новых функций&#xa;• Подготовка к масштабированию&#xa;• Планирование будущих улучшений" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#D32F2F;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="280" width="200" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Критические вехи -->
+        
+        <!-- Веха 1: Готовность инфраструктуры -->
+        <mxCell id="milestone1" value="Готовность инфраструктуры" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontSize=12;fontStyle=1;fontColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="150" y="420" width="20" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="milestone1_label" value="Месяц 2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="180" y="420" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Веха 2: Интеграция завершена -->
+        <mxCell id="milestone2" value="Интеграция завершена" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontSize=12;fontStyle=1;fontColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="370" y="420" width="20" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="milestone2_label" value="Месяц 4" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="400" y="420" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Веха 3: MVP запущен -->
+        <mxCell id="milestone3" value="MVP запущен" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontSize=12;fontStyle=1;fontColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="820" y="420" width="20" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="milestone3_label" value="Месяц 6" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="850" y="420" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Веха 4: Целевое решение -->
+        <mxCell id="milestone4" value="Целевое решение" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=3;fontSize=12;fontStyle=1;fontColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="1560" y="420" width="20" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="milestone4_label" value="Месяц 12" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="1590" y="420" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Команды -->
+        <mxCell id="teams_title" value="Команды разработки:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#1168BD;" vertex="1" parent="1">
+          <mxGeometry x="50" y="500" width="200" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Backend команда -->
+        <mxCell id="backend_team" value="Backend-команда&#xa;• Разработка системы передачи ставок&#xa;• Интеграция с кол-центрами&#xa;• Настройка безопасности" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E8;strokeColor=#4CAF50;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="50" y="540" width="250" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- DevOps команда -->
+        <mxCell id="devops_team" value="DevOps-команда&#xa;• Настройка SFTP-сервера&#xa;• Настройка мониторинга&#xa;• Автоматизация процессов" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E8;strokeColor=#4CAF50;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="320" y="540" width="250" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- QA команда -->
+        <mxCell id="qa_team" value="QA-команда&#xa;• Тестирование безопасности&#xa;• Тестирование производительности&#xa;• Тестирование интеграций" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E8;strokeColor=#4CAF50;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="590" y="540" width="250" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Бизнес-аналитики -->
+        <mxCell id="ba_team" value="Бизнес-аналитики&#xa;• Анализ требований кол-центров&#xa;• Координация с партнерами&#xa;• Валидация решений" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E8;strokeColor=#4CAF50;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="860" y="540" width="250" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Критерии успеха -->
+        <mxCell id="success_criteria_title" value="Критерии успеха:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#1168BD;" vertex="1" parent="1">
+          <mxGeometry x="50" y="650" width="200" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Технические критерии -->
+        <mxCell id="tech_criteria" value="Технические критерии:&#xa;• Время обновления ставок < 5 минут&#xa;• Доступность системы 99.5%&#xa;• Успешная передача 99% файлов&#xa;• Отсутствие утечек данных" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#9C27B0;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="50" y="690" width="300" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Бизнес-критерии -->
+        <mxCell id="business_criteria" value="Бизнес-критерии:&#xa;• Снижение нагрузки на кол-центр на 30%&#xa;• Улучшение качества консультаций&#xa;• Повышение удовлетворенности пожилых клиентов&#xa;• Сокращение времени обработки звонков" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#9C27B0;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="370" y="690" width="350" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Риски и митигация -->
+        <mxCell id="risks_title" value="Риски и митигация:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#1168BD;" vertex="1" parent="1">
+          <mxGeometry x="50" y="820" width="200" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Высокие риски -->
+        <mxCell id="high_risks" value="Высокие риски:&#xa;• Проблемы с безопасностью&#xa;• Перегрузка кол-центров&#xa;• Проблемы с передачей данных&#xa;&#xa;Митигация:&#xa;• Шифрование файлов, безопасные протоколы&#xa;• Подключение партнерского кол-центра&#xa;• Резервирование каналов" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#F44336;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="50" y="860" width="300" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Средние риски -->
+        <mxCell id="medium_risks" value="Средние риски:&#xa;• Сложность интеграции&#xa;• Проблемы с производительностью&#xa;&#xa;Митигация:&#xa;• Поэтапное внедрение, тестирование&#xa;• Кэширование, оптимизация запросов" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FF9800;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="370" y="860" width="300" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Ограничения -->
+        <mxCell id="limitations" value="Ограничения:&#xa;• Необходимость использования SFTP&#xa;• Совместимость с существующими системами&#xa;• Требование быстрого обновления ставок&#xa;• Необходимость поддержки пожилых клиентов" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2F1;strokeColor=#00695C;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="690" y="860" width="300" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Стрелки зависимостей -->
+        <mxCell id="arrow1" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="task1" target="task2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="330" as="sourcePoint" />
+            <mxPoint x="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow2" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="task2" target="task3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="330" as="sourcePoint" />
+            <mxPoint x="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow3" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="task3" target="task4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="330" as="sourcePoint" />
+            <mxPoint x="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow4" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="task4" target="task5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="920" y="330" as="sourcePoint" />
+            <mxPoint x="1020" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow5" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="task5" target="task6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1220" y="330" as="sourcePoint" />
+            <mxPoint x="1240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow6" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="task6" target="task7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1440" y="330" as="sourcePoint" />
+            <mxPoint x="1460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 
